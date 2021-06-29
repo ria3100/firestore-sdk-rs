@@ -16,8 +16,7 @@ use firestore_grpc::{
         structured_query::{
             filter::FilterType, CollectionSelector, CompositeFilter, Filter as QueryFilter,
         },
-        value::ValueType,
-        CreateDocumentRequest, Cursor, DeleteDocumentRequest, Document, GetDocumentRequest,
+        CreateDocumentRequest, DeleteDocumentRequest, Document, GetDocumentRequest,
         RunQueryRequest, RunQueryResponse, StructuredQuery, UpdateDocumentRequest,
         Value as FsValue,
     },

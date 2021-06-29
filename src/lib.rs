@@ -156,8 +156,6 @@ impl FireStore for State {
     fn start_after(&mut self, document: Document) -> &mut Self {
         let mut cursor_values = Vec::new();
 
-        let field_path_document_id = "__name__".to_string();
-
         for order_by in self.order_by.clone() {
             let field_path = order_by.field.unwrap().field_path;
             cursor_values.push(document.fields.get(&field_path).unwrap().clone());
@@ -183,8 +181,6 @@ impl FireStore for State {
     fn end_before(&mut self, document: Document) -> &mut Self {
         let mut cursor_values = Vec::new();
 
-        let field_path_document_id = "__name__".to_string();
-
         for order_by in self.order_by.clone() {
             let field_path = order_by.field.unwrap().field_path;
             cursor_values.push(document.fields.get(&field_path).unwrap().clone());
@@ -208,8 +204,6 @@ impl FireStore for State {
 
     fn end_at(&mut self, document: Document) -> &mut Self {
         let mut cursor_values = Vec::new();
-
-        let field_path_document_id = "__name__".to_string();
 
         for order_by in self.order_by.clone() {
             let field_path = order_by.field.unwrap().field_path;
