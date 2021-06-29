@@ -1,0 +1,22 @@
+[package]
+name = "firestore-sdk"
+description = "Firestore SDK"
+version = "0.1.0"
+authors = ["Ria <ria000130@gmail.com>"]
+keywords = ["firebase", "firestore", "grpc", "gcp"]
+categories = ["database", "web-programming"]
+license = "MIT"
+edition = "2018"
+
+documentation = "https://docs.rs/firestore-sdk/"
+homepage = "https://crates.io/crates/firestore-sdk"
+repository = "https://github.com/ria3100/firestore-sdk-rs"
+
+readme = "README.md"
+
+[dependencies]
+firestore_grpc = "0.31"
+tokio = {version = "0.2", features = ["full"]}
+async-trait = "0.1.50"
+prost-types = "0.6.1"
+chrono = "0.4"
